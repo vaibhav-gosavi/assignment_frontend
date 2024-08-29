@@ -3,7 +3,7 @@ const Navbar = () => {
     <nav className="flex justify-center items-center h-[68px] w-full p-4 bg-white shadow-lg">
       <div className="flex items-center justify-center w-1/3 h-[68px]">
   <img 
-    src = "/public/company_icon.png"
+    src = "/company_icon.png"
     alt="HyggeX" 
     className="h-[120%]"
   />

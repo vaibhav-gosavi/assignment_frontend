@@ -34,12 +34,12 @@ const HeroSection = () => {
   }, [sentences.length]);
 
   return (
-    <section className="py-8 text-center h-auto">
+    <section className="py-0 text-center h-auto my-3">
       <div className="flex flex-col md:flex-row justify-center items-center gap-8 px-4 md:px-16">
         <div className="flex flex-col items-start justify-around w-full md:w-1/2 h-auto">
           <div className="flex items-center gap-4 mb-4">
             {/* Icons and Text */}
-            {["Students", "Teachers", "Parents"].map((role, idx) => (
+            {["student", "teacher", "parent"].map((role, idx) => (
               <div key={idx} className="flex items-center gap-2">
                 <img
                   src={`/${role.toLowerCase()}icon.png`}

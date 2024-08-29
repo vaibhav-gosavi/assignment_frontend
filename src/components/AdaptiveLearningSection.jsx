@@ -1,17 +1,16 @@
 const AdaptiveLearningSection = () => {
   return (
-    <section className="py-16 px-4 md:px-8 text-center min-h-[100vh] flex flex-col justify-center items-center bg-[#06286E] text-white">
+    <section className="py-10 px-4 md:px-10 text-center min-h-[100vh] flex flex-col justify-center items-center bg-[#06286E] text-white">
       {/* Heading */}
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 relative">
-        See{" "}
-        {/* SVG Underline */}
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 relative">
+        See {/* SVG Underline */}
         <span
           className="relative text-[#5189FC] font-bold"
           style={{
             backgroundImage: `url("/underline_brush.svg")`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 10px',
-            backgroundPosition: '0 calc(100% + 5px)',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% 10px",
+            backgroundPosition: "0 calc(100% + 5px)",
           }}
         >
           Adaptive Learning
@@ -22,10 +21,10 @@ const AdaptiveLearningSection = () => {
       {/* Video Container */}
       <div className="w-full max-w-[1024px] bg-white rounded-[16px] relative p-4 md:p-8 flex flex-col items-center">
         {/* Browser Window Controls */}
-        <div className="flex justify-start space-x-2 absolute top-4 left-4">
-          <div className="bg-[#E11D48] rounded-full h-[8px] w-[8px]"></div>
-          <div className="bg-[#FBBF24] rounded-full h-[8px] w-[8px]"></div>
-          <div className="bg-[#22C55E] rounded-full h-[8px] w-[8px]"></div>
+        <div className="flex justify-start items-center space-x-2 absolute top-4 left-4 z-10">
+          <div className="bg-[#E11D48] rounded-full h-[6px] w-[6px] md:h-[8px] md:w-[8px]"></div>
+          <div className="bg-[#FBBF24] rounded-full h-[6px] w-[6px] md:h-[8px] md:w-[8px]"></div>
+          <div className="bg-[#22C55E] rounded-full h-[6px] w-[6px] md:h-[8px] md:w-[8px]"></div>
         </div>
 
         {/* Responsive Video Iframe */}
