@@ -8,14 +8,19 @@ const HeroSection = () => {
       <span className="text-[#0F2669]"> in self-awareness test </span> Just now
     </p>,
     <p className="text-[14px] font-[Roboto] font-medium leading-[16px] text-justify text-[rgba(81,137,252,0.8)]">
-      250+ Students <span className="text-[#0F2669]"> have taken our </span> self-awareness test{" "}
+      250+ Students <span className="text-[#0F2669]"> have taken our </span>{" "}
+      self-awareness test{" "}
       <span className="text-[#0F2669]"> in the last 24 Hours </span>
     </p>,
     <p className="text-[14px] font-[Roboto] font-medium leading-[16px] text-justify text-[rgba(81,137,252,0.8)]">
-      1250 Students Reported <span className="text-[#0F2669]"> Improvement in their Grades with </span> HyggeX learning
+      1250 Students Reported{" "}
+      <span className="text-[#0F2669]"> Improvement in their Grades with </span>{" "}
+      HyggeX learning
     </p>,
     <p className="text-[14px] font-[Roboto] font-medium leading-[16px] text-justify text-[rgba(81,137,252,0.8)]">
-      4235+ Students <span className="text-[#0F2669]"> take our Sectional Tests on a </span> weekly basis
+      4235+ Students{" "}
+      <span className="text-[#0F2669]"> take our Sectional Tests on a </span>{" "}
+      weekly basis
     </p>,
     <p className="text-[14px] font-[Roboto] font-medium leading-[16px] text-justify text-[rgba(81,137,252,0.8)]">
       Akash <span className="text-[#0F2669]"> has scored </span> 9/10{" "}
@@ -46,7 +51,9 @@ const HeroSection = () => {
                   alt={role}
                   className="w-5 h-5"
                 />
-                <span className="text-sm font-roboto text-[#0F2669]">{role}</span>
+                <span className="text-sm font-roboto text-[#0F2669]">
+                  {role}
+                </span>
               </div>
             ))}
           </div>
@@ -58,9 +65,9 @@ const HeroSection = () => {
               className="relative font-bold"
               style={{
                 backgroundImage: `url("/blueline.svg")`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: '100% 10px',
-                backgroundPosition: '0 100%',
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "100% 10px",
+                backgroundPosition: "0 100%",
               }}
             >
               Learning
@@ -76,12 +83,12 @@ const HeroSection = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
-            <button className="flex items-center justify-center w-full md:w-40 h-12 bg-[#407FFF] text-white font-[Poppins] rounded-lg shadow-md">
+          <div className="flex flex-row items-center gap-4 mb-6 w-full">
+            <button className="flex items-center justify-center w-1/2 md:w-40 h-12 bg-[#407FFF] text-white font-[Poppins] rounded-lg shadow-md">
               Start Learning
               <span className="ml-2">&#x3e;</span>
             </button>
-            <button className="flex items-center justify-center w-full md:w-40 h-12 bg-[rgba(64,127,255,0.2)] text-[rgba(81,137,252,0.8)] font-[Poppins] rounded-lg shadow-sm">
+            <button className="flex items-center justify-center w-1/2 md:w-40 h-12 bg-[rgba(64,127,255,0.2)] text-[rgba(81,137,252,0.8)] font-[Poppins] rounded-lg shadow-sm">
               Book a Demo
             </button>
           </div>
@@ -92,7 +99,7 @@ const HeroSection = () => {
               <div
                 key={index}
                 className={`absolute transition-opacity duration-1000 ease-in-out ${
-                  visibleSentence === index ? 'opacity-100' : 'opacity-0'
+                  visibleSentence === index ? "opacity-100" : "opacity-0"
                 }`}
               >
                 {sentence}
@@ -103,27 +110,52 @@ const HeroSection = () => {
 
         {/* Right Side Image */}
         <div className="flex justify-center items-center w-full md:w-1/2 h-auto">
-          <img src="/imagefront.png" alt="Hero Image" className="w-full h-auto" />
+          <img
+            src="/imagefront.png"
+            alt="Hero Image"
+            className="w-full h-auto"
+          />
         </div>
       </div>
 
-      {/* Trusted by Section */}
+      {/* Trusted by Section with Marquee */}
       <div className="flex flex-col md:flex-row items-center bg-[#407FFF0A] p-2">
-        <div className="text-left mb-4 md:mb-0 md:ml-20 md:w-[300px]  ">
-          <p className="text-[#0F2669] font-bold font-roboto  ">
-            Trusted by<br/>the best<p className="text-[#6B6B6B] font-bold">in the industry</p>
+        <div className="text-left mb-4 md:mb-0 md:ml-20 md:w-[300px]">
+          {/* Single line text for mobile */}
+          <p className="text-[#0F2669] font-bold font-roboto block md:hidden">
+            Trusted by the best{" "}
+            <span className="text-[#6B6B6B] font-bold">in the industry</span>
+          </p>
+          {/* Multi-line text for larger screens */}
+          <p className="hidden md:block text-[#0F2669] font-bold font-roboto">
+            Trusted by
+            <br />
+            the best
+            <br />
+            <span className="text-[#6B6B6B] font-bold">in the industry</span>
           </p>
         </div>
-        <div className="flex  justify-center items-center gap-4 md:gap-12 w-full">
-          {["razorpay", "startinup", "vishalakshi", "wadhwani", "microsoft", "startupindia"].map((partner, index) => (
-            <img
-              key={index}
-              src={`/${partner}.png`}
-              alt={partner}
-              className="h-12 w-28 md:w-36 object-contain"
-            />
-          ))}
-        </div>
+
+        {/* Marquee for Partner Logos */}
+        <marquee className="max-w-full">
+          <div className="flex justify-center items-center gap-4 md:gap-12 w-full">
+            {[
+              "razorpay",
+              "startinup",
+              "vishalakshi",
+              "wadhwani",
+              "microsoft",
+              "startupindia",
+            ].map((partner, index) => (
+              <img
+                key={index}
+                src={`/${partner}.png`}
+                alt={partner}
+                className="h-12 w-28 md:w-36 object-contain"
+              />
+            ))}
+          </div>
+        </marquee>
       </div>
     </section>
   );

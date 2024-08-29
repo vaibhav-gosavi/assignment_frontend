@@ -1,8 +1,8 @@
 const AdaptiveLearningSection = () => {
   return (
-    <section className="py-10 px-4 md:px-10 text-center min-h-[100vh] flex flex-col justify-center items-center bg-[#06286E] text-white">
+    <section className="py-6 md:py-10 px-4 md:px-10 text-center min-h-[80vh] md:min-h-[100vh] flex flex-col justify-center items-center bg-[#06286E] text-white">
       {/* Heading */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 relative">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 relative">
         See {/* SVG Underline */}
         <span
           className="relative text-[#5189FC] font-bold"
